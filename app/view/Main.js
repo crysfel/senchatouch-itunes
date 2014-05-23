@@ -8,16 +8,12 @@ Ext.define('Itunes.view.Main', {
     extend: 'Ext.Container',
     xtype : 'main',
     requires : [
-        
+        'Itunes.view.Header'
     ],
     config : {
         layout  : 'vbox',
         items   : [{
-            //we are going to move this container to a class
-            xtype   : 'container',
-            height  : 120,
-            style   : 'background:#bdc3c7', //we will remove this later
-            html    : 'The Header'
+            xtype   : 'header'
         },{
             //we are going to move this container to a class
             xtype   : 'component',
