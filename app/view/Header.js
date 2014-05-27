@@ -7,7 +7,7 @@ Ext.define('Itunes.view.Header', {
     extend  : 'Ext.Container',
     xtype   : 'header', 
     requires: [
-        
+        'Itunes.view.Player'
     ],
 
     config: {
@@ -16,18 +16,47 @@ Ext.define('Itunes.view.Header', {
         items   : [{
             xtype   : 'container',
             flex    : 1,
-            style   : 'background:#e67e22', //we will remove this later
-            html    : 'Controls'
+            layout  : {
+                type    : 'hbox',
+                align   : 'center'
+            },
+            defaults: {
+                xtype : 'button',
+                width : 40,
+                height: 40,
+                margin: 5
+            },
+            items   : [{
+                text  : '<<'
+            },{
+                text  : '>'
+            },{
+                text  : '>>'
+            },{
+                xtype       : 'sliderfield',
+                width       : null,
+                height      : null,
+                flex        : 1,
+                value       : 60,
+                minValue    : 0,
+                maxValue    : 100
+            }]
         },{
-            xtype : 'container',
-            flex    : 1,
-            style   : 'background:#d35400', //we will remove this later
-            html    : 'Player'
+            xtype : 'player',
+            flex    : 1
         },{
-            xtype : 'container',
+            xtype   : 'container',
             flex    : 1,
-            style   : 'background:#e74c3c', //we will remove this later
-            html    : 'Search'
+            layout  : {
+                type    : 'hbox',
+                align   : 'center'
+            },
+            items   : [{
+                xtype   : 'textfield',
+                name    : 'query',
+                flex    : 1,
+                margin  : 20
+            }]
         }]
     }
 });
