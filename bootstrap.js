@@ -639,7 +639,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
-  "Itunes.view.Main": []
+  "Itunes.view.Header": [],
+  "Itunes.view.Main": [],
+  "Itunes.view.Player": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
@@ -1359,7 +1361,13 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "Itunes.view.Header": [
+    "widget.header"
+  ],
   "Itunes.view.Main": [
     "widget.main"
+  ],
+  "Itunes.view.Player": [
+    "widget.player"
   ]
 });
